@@ -18,11 +18,7 @@ import retrofit2.http.Part;
 import retrofit2.http.PartMap;
 import retrofit2.http.Url;
 
-/**
- * author:      林福君
- * date:        2018/8/25 16:07
- * description:
- */
+
 
 public interface NetServices {
 
@@ -30,31 +26,6 @@ public interface NetServices {
     @POST("getKcont")
     @FormUrlEncoded
     Observable<BaseEntery<KContBean>> requestCont(@Field("packageName") String packageName);
-    /**
-     *
-     * @param url          (KApi.baiDuPlant)
-     * @return
-     */
-    @POST
-    @FormUrlEncoded
-    Observable<ResponseBody> requestPlant(@Url String url, @Field("userId") String userId, @Field("name") String name,@Field("portraitUri")String portraitUri);
-
-
-
-    /**
-     *
-     * @param type   1, home 分类  2，点击文件
-     * @param classifyType
-     * @param fileName
-     * @return
-     */
-    @FormUrlEncoded
-    @POST("lyuploadClickDataInterface")
-    Observable<ResponseBody> uploadClickData(@Field("type") int type,
-                                             @Field("classifyType") int classifyType,
-                                             @Field("fileName") String fileName);
-
-
 
 
 }

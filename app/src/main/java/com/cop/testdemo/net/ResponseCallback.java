@@ -8,9 +8,7 @@ import android.util.Log;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-/**
- * Create by wangchao on 2018/1/4 17:09
- */
+
 public abstract class ResponseCallback<T extends BaseEntery> implements Observer<T>{
 
     public abstract void onSuccess(T value);

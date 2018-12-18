@@ -4,9 +4,7 @@ package com.cop.testdemo.net;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
-/**
- * Create by wangchao on 2018/1/4 17:09
- */
+
 public abstract class ResponseCallbackApi<T>  implements Observer<T>{
 
     public abstract void onSuccess(T value);

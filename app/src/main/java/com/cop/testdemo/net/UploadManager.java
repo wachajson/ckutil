@@ -8,10 +8,6 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
-/**
- * Create by wangchao on 2017/12/25 13:50
- * 文件上传
- */
 public class UploadManager {
 
     public static MultipartBody fileToMultipartBody(String key , File file) {
@@ -28,7 +24,6 @@ public class UploadManager {
         MultipartBody.Builder builder = new MultipartBody.Builder();
 
         for (File file : files) {
-            // TODO: 16-4-2  这里为了简单起见，没有判断file的类型
             RequestBody requestBody = RequestBody.create(MediaType.parse("image/png"), file);
             builder.addFormDataPart("file", file.getName(), requestBody);
         }
@@ -41,7 +36,6 @@ public class UploadManager {
     public static List<MultipartBody.Part> filesToMultipartBodyParts(List<File> files) {
         List<MultipartBody.Part> parts = new ArrayList<>(files.size());
         for (File file : files) {
-            // TODO: 16-4-2  这里为了简单起见，没有判断file的类型
             RequestBody requestBody = RequestBody.create(MediaType.parse("image/png"), file);
             MultipartBody.Part part = MultipartBody.Part.createFormData("file", file.getName(), requestBody);
             parts.add(part);

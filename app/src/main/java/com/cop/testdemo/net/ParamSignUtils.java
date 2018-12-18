@@ -16,10 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-/**
- * 请求参数签名工具类
- *
- */
 public class ParamSignUtils {
 	
 	@SuppressWarnings("rawtypes")
@@ -69,12 +65,7 @@ public class ParamSignUtils {
 		return sign(paramValues, null, secret);
 	}
 
-	/**
-	 * @param paramValues
-	 * @param ignoreParamNames
-	 * @param secret
-	 * @return
-	 */
+
 	public static HashMap<String, String> sign(Map<String, String> paramValues,
                                                List<String> ignoreParamNames, String secret) {
 		try {

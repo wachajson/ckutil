@@ -8,9 +8,7 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Create by wangchao on 2017/12/25 11:07
- */
+
 public class RetrofitManager {
     private static volatile RetrofitManager instance;
     private static final int CONNECT_TIME_OUT = 30;
@@ -43,7 +41,6 @@ public class RetrofitManager {
 
     public OkHttpClient.Builder setOkhttpClientBuilderWithoutCommon(){
         OkHttpClient.Builder okhttpClientBuilder = new OkHttpClient.Builder()
-                .addInterceptor(new RetryIntercepter(2))//重试
                 .connectTimeout(CONNECT_TIME_OUT, TimeUnit.SECONDS)
                 .readTimeout(READ_TIME_OUT, TimeUnit.SECONDS)
                 .writeTimeout(READ_TIME_OUT, TimeUnit.SECONDS)

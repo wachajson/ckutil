@@ -2,9 +2,6 @@ package com.cop.testdemo.net;
 
 import java.io.Serializable;
 
-/**
- * Create by wangchao on 2018/8/13 09:18
- */
 public class BaseEntery<T> implements Serializable {
     public int code;
     public String msg;

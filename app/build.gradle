@@ -23,7 +23,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -32,7 +32,7 @@ android {
 
 }
 group="com.ulink.kmutil"
-version = "1.0.3"
+version = "1.0.4"
 def siteUrl = 'https://github.com/wachajson/ckutil'    // project homepage
 def gitUrl = 'https://github.com/wachajson/ckutil.git' // project git
 uploadArchives {
@@ -102,13 +102,13 @@ install {
             project {
                 packaging 'aar'
                 // Add your description here
-                name 'Kmutil'//项目名
+                name 'kmutil'//项目名
                 description 'Kmutil library.'//项目描述
                 url siteUrl
                 // Set your license
                 licenses {
                     license {
-                        name 'The Apache Software License, Version 2.0' //和之前自己定义的协议一致
+                        name 'Apache-2.0' //和之前自己定义的协议一致
                         url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
                     }
                 }

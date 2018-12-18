@@ -1,8 +1,5 @@
 package com.cop.testdemo.net;
 
-/**
- * Create by wangchao on 2017/12/25 11:33
- */
 public interface KApi {
 
 
