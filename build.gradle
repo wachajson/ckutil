@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        repositories {
+            flatDir {
+                dirs 'libs'
+            }
+            jcenter()
+            google()
+            maven { url "https://jitpack.io" }
+        }
+        maven {
+            //cooker-plugin 所在的仓库
+            //这里是发布在本地文件夹了
+            url uri('D:\\Program Files\\Apache\\maven-repository')
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+//        classpath 'com.gradle.test.plugin:aptlib:1.0.1'
+        classpath 'com.meituan.android.walle:plugin:1.1.2'
+        //加入以下两句配置
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+
+//        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.0.0'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+    applicationIdDegbug = true
+}

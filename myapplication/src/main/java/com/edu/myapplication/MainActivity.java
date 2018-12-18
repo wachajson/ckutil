@@ -1,0 +1,16 @@
+package com.edu.myapplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import com.cop.testdemo.KschemeUtils;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        KschemeUtils.init(this);
+    }
+}
